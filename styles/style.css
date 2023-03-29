@@ -5,14 +5,12 @@ body {
 }
 
 .page-wrap {
-  min-height: 100vh;
   display: flex;
   flex-direction: column;
   align-items: center;
   background-image: url(/images/4.jpg);
   background-size: cover;
   background-position: center;
-
 }
 
 .header {
@@ -28,8 +26,7 @@ body {
 .title {
   font-size: 35px;
   font-weight: 400;
-  display: flex;
-  justify-content: center;
+  text-align: center;
   text-shadow: rgb(87, 94, 87) 2px 2px 10px;
 }
 
@@ -42,10 +39,10 @@ body {
 
 .main {
   min-height: calc(100vh - 16vh);
-  background-color: rgba(255, 255, 255, 0.682);
-  padding: 20px;
   display: flex;
   flex-direction: column;
+  background-color: rgba(255, 255, 255, 0.682);
+  padding: 20px;
 }
 
 .main-subtitle,
@@ -58,7 +55,8 @@ body {
 .task-added {
   text-align: center;
   margin-left: 90px;
-  color:  rgb(49, 151, 105);
+  color: rgb(49, 151, 105);
+  opacity: 0;
   text-shadow: grey 1px 1px 2px;
 }
 
@@ -67,21 +65,26 @@ body {
   height: 30px;
   font-family: "Edu NSW ACT Foundation", cursive;
   text-align: center;
-  border-radius: 6px;
-  border: 1px solid black;
-  box-shadow: grey 1px 1px 10px;
   margin: 5px 0 0;
+  border: 1px solid black;
+  border-radius: 6px;
+  box-shadow: grey 1px 1px 10px;
 }
 
 .add-btn {
   font-family: "Edu NSW ACT Foundation", cursive;
   font-weight: 600;
   padding: 6px 18px;
-  border-radius: 6px;
-  border: 1px solid black;
-  box-shadow: grey 1px 1px 10px;
   margin-left: 35px;
   background-color: rgba(137, 221, 183, 0.464);
+  border: 1px solid black;
+  border-radius: 6px;
+  box-shadow: grey 1px 1px 10px;
+  transition: all 0.5s ease;
+}
+
+.add-btn:hover {
+  scale: 1.1;
 }
 
 @media screen and (max-width: 534px) {
@@ -92,8 +95,49 @@ body {
 
 .svg {
   width: 150px;
-  transform: rotate(90deg);
   display: flex;
   justify-content: center;
+  transform: rotate(90deg);
   margin: -30px auto -20px;
+}
+
+.task {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.btn {
+  width: 54px;
+  margin: 10px 6px 5px 0;
+  padding: 6px 0;
+  border: 1px solid black;
+  border-radius: 6px;
+  box-shadow: grey 1px 1px 10px;
+  transition: all 0.4s ease;
+}
+
+.btn:hover {
+  scale: 1.1;
+}
+
+.done {
+  background-color: rgba(137, 221, 183, 0.464);
+}
+
+.edit {
+  background-color: rgba(224, 226, 115, 0.464);
+}
+
+.delete {
+  background-color: rgba(231, 149, 157, 0.94);
+}
+
+.task-done {
+  text-decoration: line-through;
+}
+
+.task-process {
+  text-decoration: none;
 }
