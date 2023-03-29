@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <link rel="stylesheet" href="./styles/reset.css" />
+    <link rel="stylesheet" href="./styles/style.css" />
+  </head>
+  <body>
+    <div class="page-wrap">
+      <div class="container">
+        <header class="header">
+          <h1 class="title">To Do List</h1>
+        </header>
+
+        <main class="main">
+          <section class="add-task">
+            <h2 class="main-subtitle">Add Task</h2>
+            <p class="task-added">Task added!</p>
+            <form id="add-form">
+              <div class="row">
+                <input
+                  type="text"
+                  class="input"
+                  placeholder="Write here new task."
+                />
+                <button type="submit" class="add-btn">Add ask</button>
+              </div>
+            </form>
+            <img src="./images/1.svg" alt="" class="svg" />
+          </section>
+          <section class="task-list">
+            <h2 class="task-subtitle">Task List</h2>
+          </section>
+        </main>
+      </div>
+    </div>
+    <script src="./script.js"></script>
+  </body>
+</html>
